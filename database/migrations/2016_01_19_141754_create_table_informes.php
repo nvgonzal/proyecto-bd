@@ -16,7 +16,7 @@ class CreateTableInformes extends Migration
             $table->increments('id');
             $table->text('texto');
             $table->date('fecha_creacion');
-            $table->date('fecha_ulitma_revision');
+            $table->date('fecha_ultima_revision');
             $table->integer('proyecto_id')->unsigned();
             $table->string('empleado_rut',12)->nullable();
 

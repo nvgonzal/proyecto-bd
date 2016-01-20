@@ -19,6 +19,7 @@ class CreateClientesTable extends Migration
             $table->string('apellido_materno',50);
             $table->string('direccion');
             $table->string('email',60);
+            $table->string('telefono',30);
             $table->date('fecha_ingreso');
             $table->integer('sector_id')->unsigned();
             $table->primary('rut');

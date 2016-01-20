@@ -27,7 +27,7 @@ class EditTableEmpleados extends Migration
     public function down()
     {
         Schema::table('empleados', function (Blueprint $table) {
-            //
+            $table->dropForeign('empleados_cargo_id_foreign');
         });
     }
 }
