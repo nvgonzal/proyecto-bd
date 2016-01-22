@@ -18,6 +18,9 @@ class ClientesController extends Controller
      */
     public function index()
     {
+        /*SQL tentativo de seleccion de todas tuplas de tabla cliente
+         * $clientes = DB::select(DB::raw('SELECT * FROM clientes'));
+        */
         $clientes = Cliente::all();
         return view('clientes.index')->with('clientes',$clientes);
 
@@ -70,8 +73,10 @@ class ClientesController extends Controller
         if($validacion->fails()){
             return redirect()->to('cliente/create')->withInput()->withErrors($validacion->messages());
         }
-
-
+        /*SQL tentativo de insertcion de tuplas
+         * DB::insert(DB::raw('INSERT INTO TABLE cliente(rut,nombres,apellido_paterno
+         * ,apellido_materno,fecha_ingreso,direccion,telefono,email,sector_id) VALUES
+         * ($request->all()'));*/
         $cliente = new Cliente();
         $cliente->setAttribute('rut',$request->input('rut'));
         $cliente->setAttribute('nombres',$request->input('nombres'));
