@@ -1,0 +1,8 @@
+--Estructura de carpetas del proyecto--
+Archivos con consultas del proyecto
+    /app/Http/Controller/ConsultaController.php
+Carpeta con vistas del proyecto
+    /resources/view/consultas/.
+Archivo con insercion de tuplas de clientes
+    /app/Http/Controller/ClientesController.php
+Carpeta con vista de index y creacion de cliente
